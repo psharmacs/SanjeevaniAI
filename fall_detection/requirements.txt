@@ -1,0 +1,11 @@
+opencv-python
+ultralytics
+mediapipe
+numpy
+scipy
+SpeechRecognition
+sounddevice
+fastapi
+uvicorn
+websockets
+python-multipart

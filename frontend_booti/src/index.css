@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+body { 
+  background-color: #f8fafc; /* Soft, airy off-white */
+  color: #0f172a; /* Deep slate/navy text for high readability */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0f172a;
+}
+
+/* Premium Light Glass Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 40px -12px rgba(15, 23, 42, 0.08);
+}
