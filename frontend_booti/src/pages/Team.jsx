@@ -18,6 +18,38 @@ export default function Team() {
       icon: <Code className="w-8 h-8 text-cyan-500" />,
       linkedin: "https://www.linkedin.com/in/prakhar-sharma-511b943b0",
       email: "prakhar0897sh@gmail.com"
+    },
+    { 
+      name: "Sachin Sengar", 
+      role: "Backend Developer", 
+      photo: "/team/3.jpg",
+      icon: <Database className="w-8 h-8 text-emerald-500" />,
+      linkedin: "https://www.linkedin.com/in/sachin-sengar26",
+      email: "sachinsengar2609@gmail.com"
+    },
+    { 
+      name: "Barsha Rani Das", 
+      role: "Team Member", 
+      photo: "/team/4.jpg",
+      icon: <Users className="w-8 h-8 text-pink-500" />,
+      linkedin: "https://www.linkedin.com/in/barsha-rani-das-1476283a8",
+      email: "dasbarsharani424@gmail.com"
+    },
+    { 
+      name: "Mohit Sikarwar", 
+      role: "Team Member", 
+      photo: "/team/5.jpg",
+      icon: <Paintbrush className="w-8 h-8 text-amber-500" />,
+      linkedin: "https://www.linkedin.com/in/mohit-sikarwar-819aa7342",
+      email: "msikarwar743@gmail.com"
+    },
+    { 
+      name: "Rishikant Sharma", 
+      role: "Team Member", 
+      photo: "/team/6.jpg",
+      icon: <Users className="w-8 h-8 text-indigo-500" />,
+      linkedin: null,
+      email: "rishikantbhardwaj6@gmail.com"
     }
   ];
 
