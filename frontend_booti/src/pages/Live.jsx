@@ -242,7 +242,6 @@ export default function Live() {
                   log?.includes("[TIMER]") && "text-yellow-400"
                 )}
               >
-                <span className="text-slate-600 mr-2">{new Date().toISOString().substring(11, 19)}</span>
                 {log}
               </div>
             ))}
