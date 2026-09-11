@@ -1,4 +1,5 @@
 # Sanjeevani AI 🛡️
+## 🌐 Deployment: https://sanjeevani-ai-beta.vercel.app/
 
 *AI that cares. A safer tomorrow.*
 
@@ -39,6 +40,3 @@ Sanjeevani AI processes data entirely at the Edge to ensure maximum privacy and 
 *   **MediaPipe Pose:** High-fidelity human pose estimation.
 *   **Python:** Core logic for the live feed server, video processing, and edge inference simulation.
 *   **OpenCV:** Computer vision tasks and video stream manipulation.
-
-## 🌐 Deployment
-*   **Frontend Hosting:** Vercel (CI/CD integrated with GitHub)
