@@ -173,16 +173,14 @@ export const BotProvider = ({ children }) => {
     navigate('/');
     window.speechSynthesis.cancel();
     
-    await speak("Welcome to the Sanjeevani AI guided tour. I am your AI assistant, and I will be walking you through our intelligent safety system.");
+    await speak("Welcome to Sanjeevani AI. An intelligent safety system built with compassion, to protect our loved ones when they are most vulnerable.");
     if (activeRef.current !== 'TOUR_START') return;
     
     navigate('/team');
-    // Assuming playTeamScript existed previously
-    await speak("We are a team of aspirational engineers dedicated to building Sanjeevani AI, an intelligent safety system that observes, understands, and responds to protect the elderly.");
+    await speak("We are Team Prometheus. A dedicated group of engineers using advanced AI to build technology that detects risks early and saves lives.");
     if (activeRef.current !== 'TOUR_START') return;
     
     navigate('/live');
-    // Live.jsx will handle video sequencing and trigger scripts dynamically
   };
 
   const stopTour = () => {
