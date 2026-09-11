@@ -1,79 +1,94 @@
-import React from 'react';
-import { Users, Code, Paintbrush, Database, BrainCircuit } from 'lucide-react';
+import { Link as LinkIcon, Mail } from 'lucide-react';
+
+const TEAM = [
+  {
+    name: "Raj Pratap Singh Sengar",
+    linkedin: "https://www.linkedin.com/in/raj-pratap-singh-sengar-3202183a9",
+    email: "rajsengar1804@gmail.com",
+    image: "/team/5.jpg"
+  },
+  {
+    name: "Prakhar Sharma",
+    linkedin: "https://www.linkedin.com/in/prakhar-sharma-511b943b0",
+    email: "prakhar0897sh@gmail.com",
+    image: "/team/prakhar_new.jpg"
+  },
+  {
+    name: "Prince Singh Kushwah",
+    linkedin: "#",
+    email: "princerajawat2611@gmail.com",
+    image: "/team/prince.jpg"
+  },
+  {
+    name: "Sonam Sharma",
+    linkedin: "#",
+    email: "Sonamsharma29653@gmail.com",
+    image: "/team/sonam.jpg"
+  }
+];
 
 export default function Team() {
-  const team = [
-    { 
-      name: "Raj Pratap Singh Sengar", 
-      role: "AI & ML Engineer", 
-      photo: "/team/2.jpg",
-      icon: <BrainCircuit className="w-8 h-8 text-teal-500" />,
-      linkedin: "https://www.linkedin.com/in/raj-pratap-singh-sengar-3202183a9",
-      email: "rajsengar1804@gmail.com"
-    },
-    { 
-      name: "Prakhar Sharma", 
-      role: "Frontend Developer", 
-      photo: "/team/1.jpg",
-      icon: <Code className="w-8 h-8 text-cyan-500" />,
-      linkedin: "https://www.linkedin.com/in/prakhar-sharma-511b943b0",
-      email: "prakhar0897sh@gmail.com"
-    }
-  ];
-
   return (
-    <div className="min-h-[calc(100vh-5rem)] p-6 max-w-7xl mx-auto flex flex-col items-center justify-center bg-transparent py-12">
-      
-      <div className="inline-flex items-center gap-2 bg-slate-800 text-white px-4 py-2 rounded-full font-bold text-sm tracking-widest mb-6 shadow-sm">
-        <Users className="w-4 h-4 text-teal-400" />
-        TEAM PROMETHEUS
-      </div>
-      
-      <h1 className="text-5xl font-black tracking-tight text-slate-800 mb-4 text-center">
-        Meet the Innovators
-      </h1>
-      
-      <div className="max-w-4xl mx-auto text-center mb-16 space-y-5">
-        <p className="text-xl text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
-          We are a team of aspirational engineers dedicated to building Sanjeevani AI—an intelligent safety system that observes, understands, and responds to protect the elderly.
+    <div className="min-h-[calc(100vh-5rem)] p-6 md:p-12 max-w-7xl mx-auto flex flex-col bg-transparent">
+      <header className="mb-16">
+        <h1 className="text-4xl font-normal tracking-wide text-slate-900" style={{ fontFamily: 'Georgia, serif' }}>The Prometheus</h1>
+        <p className="text-teal-600 mt-2 font-bold tracking-wider uppercase text-sm">Smart India Hackathon Team</p>
+        <p className="text-slate-600 mt-6 max-w-3xl leading-relaxed text-lg font-light">
+          We are <strong className="text-slate-900 font-medium">The Prometheus</strong>, a team of passionate developers and engineers united by a single vision: to build technology that saves lives. For the Smart India Hackathon, we developed <strong className="text-teal-600 font-medium">Sanjeevani AI</strong> to solve the critical challenge of elderly safety and fall detection using advanced computer vision and real-time processing.
+          <br /><br />
+          Meet the innovators behind the intelligence:
         </p>
-        <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-3xl mx-auto">
-          Coming together for the Smart India Hackathon 2026, Team Prometheus combines expertise in Computer Vision, Artificial Intelligence, and full-stack engineering. Our mission is to bridge the gap between passive surveillance and active, life-saving intervention.
-        </p>
-      </div>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-        {team.map((member, i) => (
-          <div key={i} className="glass-panel p-8 rounded-[2rem] border border-slate-200 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 shadow-lg relative group overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {TEAM.map((member, i) => (
+          <div key={i} className="glass-panel rounded-2xl p-6 flex flex-col hover:border-teal-500/30 hover:shadow-2xl transition-all group">
             
-            <div className="w-24 h-24 rounded-full bg-slate-50 flex items-center justify-center mb-6 shadow-inner border-4 border-white overflow-hidden relative z-10">
-              {member.photo ? (
-                <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+            <div className="flex items-center gap-4 mb-4">
+              {member.image ? (
+                <img src={member.image} alt={member.name} className="w-16 h-16 rounded-full object-cover shadow-sm ring-2 ring-slate-100 group-hover:ring-teal-200 transition-colors" />
               ) : (
-                member.icon
+                <div className="w-16 h-16 rounded-full bg-slate-100 shadow-sm ring-2 ring-slate-100 flex items-center justify-center text-xl text-slate-400 font-semibold group-hover:ring-teal-200 transition-colors">
+                  {member.name.charAt(0)}
+                </div>
               )}
+              <h2 className="text-xl font-medium text-slate-800">{member.name}</h2>
             </div>
             
-            <h3 className="text-xl font-bold text-slate-800 mb-1 relative z-10">{member.name}</h3>
-            <p className="text-sm font-bold tracking-widest text-slate-400 uppercase relative z-10 mb-6">{member.role}</p>
+            <div className="flex-1"></div>
             
-            <div className="flex gap-4 relative z-10">
-              {member.linkedin && (
-                <a href={member.linkedin} target="_blank" rel="noreferrer" className="text-xs font-bold text-slate-400 hover:text-blue-600 transition-colors">
-                  LINKEDIN
+            <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
+              {/* Always show exactly two rows for consistency */}
+              
+              {/* Email Row */}
+              {member.email !== "#" ? (
+                <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}`} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-colors text-sm font-medium truncate">
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span className="truncate">{member.email}</span>
                 </a>
+              ) : (
+                <div className="flex items-center gap-2 text-slate-300 text-sm font-medium select-none">
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span>Email</span>
+                </div>
               )}
-              {member.email && (
-                <a href={`mailto:${member.email}`} className="text-xs font-bold text-slate-400 hover:text-red-500 transition-colors">
-                  {member.email}
-                </a>
-              )}
-            </div>
 
+              {/* LinkedIn Row */}
+              {member.linkedin !== "#" ? (
+                <a href={member.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">
+                  <LinkIcon className="w-4 h-4 flex-shrink-0" />
+                  <span>LinkedIn Profile</span>
+                </a>
+              ) : (
+                <div className="flex items-center gap-2 text-slate-300 text-sm font-medium select-none">
+                  <LinkIcon className="w-4 h-4 flex-shrink-0" />
+                  <span>LinkedIn Profile</span>
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </div>
-
     </div>
   );
 }
