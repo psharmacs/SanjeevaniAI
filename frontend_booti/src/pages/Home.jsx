@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useBot } from '../context/BotContext';
 import { motion } from 'framer-motion';
 import { Users, HeartPulse, Shield, Leaf, Play, CheckCircle2 } from 'lucide-react';
 
 export default function Home() {
+  const { startTour } = useBot();
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden bg-[#e6f0e9]">
       
@@ -151,3 +153,4 @@ export default function Home() {
     </div>
   );
 }
+

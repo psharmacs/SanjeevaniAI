@@ -157,7 +157,7 @@ export const BotProvider = ({ children }) => {
     await new Promise(r => setTimeout(r, 1000));
     if (activeRef.current !== runId) return;
 
-    await speak("For more information, you can refer to this page and the mentioned SIH presentation.");
+    await speak("For more information on how our AI works, you can explore the Guidebook page.");
     
     setTimeout(() => {
       if (activeRef.current !== runId) return;
@@ -210,3 +210,5 @@ export const BotProvider = ({ children }) => {
     </BotContext.Provider>
   );
 };
+
+
