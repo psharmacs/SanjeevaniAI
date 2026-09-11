@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Live from './pages/Live';
 import Guidebook from './pages/Guidebook';
+import Testing from './pages/Testing';
 import { BotProvider } from './context/BotContext';
 import SAIBot from './components/SAIBot';
 
@@ -20,6 +21,7 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/live" element={<Live />} />
               <Route path="/guidebook" element={<Guidebook />} />
+              <Route path="/testing" element={<Testing />} />
             </Routes>
           </main>
         </div>

@@ -200,7 +200,7 @@ export default function Testing() {
                 autoPlay
                 disablePictureInPicture
                 controlsList="nodownload noplaybackrate nofullscreen"
-                src={`/videos/${selectedVideo}_pro.mp4`}
+                src={`/videos/${selectedVideo === 'without_bed' ? 'without_bed_and_voice_integration.mp4' : selectedVideo + '_pro.mp4'}`}
               >
                 Your browser does not support the video tag.
               </video>
@@ -209,7 +209,7 @@ export default function Testing() {
 
           <div className="bg-slate-900 rounded-[2rem] p-6 shadow-lg border border-slate-800 font-mono text-sm overflow-x-auto">
             <div className="text-slate-400 mb-4 pb-2 border-b border-slate-800/50 flex items-center justify-between">
-              <span>SYSTEM LOG: {selectedVideo}_pro.mp4</span>
+              <span>SYSTEM LOG: {selectedVideo === 'without_bed' ? 'without_bed_and_voice_integration.mp4' : `${selectedVideo}_pro.mp4`}</span>
               <span className="flex items-center gap-2 text-teal-500 text-xs">
                 <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
                 SIMULATED OUTPUT
