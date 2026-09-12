@@ -45,14 +45,16 @@ export default function Home() {
           </p>
           
           {/* Buttons */}
-          <div className="flex items-center gap-4 mb-16">
-            <Link 
-              to="/live" 
-              className="px-8 py-3.5 bg-[#0a4d3c] text-white hover:bg-[#07362a] font-medium rounded-full flex items-center gap-2 transition-all shadow-lg"
-            >
-              Explore Our Solution &rarr;
-            </Link>
-          </div>
+            <div className="flex items-center gap-4 mb-16 relative group">
+              <div className="absolute -inset-1 bg-[#0a4d3c] rounded-full blur opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              <div className="absolute inset-0 bg-teal-400 rounded-full animate-ping opacity-20"></div>
+              <button 
+                onClick={startTour} 
+                className="relative px-8 py-3.5 bg-[#0a4d3c] text-white hover:bg-[#07362a] font-bold rounded-full flex items-center gap-2 transition-all shadow-xl hover:scale-105 hover:shadow-2xl ring-4 ring-[#0a4d3c]/30"
+              >
+                Explore Our Solution &rarr;
+              </button>
+            </div>
 
           {/* Four Features */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
