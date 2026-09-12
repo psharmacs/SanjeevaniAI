@@ -5,6 +5,7 @@ import Team from './pages/Team';
 import Live from './pages/Live';
 import Guidebook from './pages/Guidebook';
 import Testing from './pages/Testing';
+import Camera from './pages/Camera';
 import { BotProvider } from './context/BotContext';
 import SAIBot from './components/SAIBot';
 
@@ -19,7 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/team" element={<Team />} />
-              <Route path="/live" element={<Live />} />
+              <Route path="/live" element={<Live />} />`n              <Route path="/camera" element={<Camera />} />
               <Route path="/guidebook" element={<Guidebook />} />
               <Route path="/testing" element={<Testing />} />
             </Routes>
@@ -31,3 +32,4 @@ function App() {
 }
 
 export default App;
+
