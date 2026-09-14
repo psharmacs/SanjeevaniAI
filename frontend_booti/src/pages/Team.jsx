@@ -60,11 +60,11 @@ export default function Team() {
               <p className="text-teal-600 font-semibold text-xs tracking-[0.2em] uppercase mb-8">{member.role}</p>
               
               <div className="flex flex-col gap-4">
-                <a href={https://mail.google.com/mail/?view=cm&fs=1&to=$member.email} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 py-3.5 px-4 rounded-2xl bg-slate-50 hover:bg-teal-50 text-slate-600 hover:text-teal-700 transition-colors text-sm font-bold tracking-wide border border-slate-100 hover:border-teal-200">
+                <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}`} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 py-3.5 px-4 rounded-2xl bg-slate-50 hover:bg-teal-50 text-slate-600 hover:text-teal-700 transition-colors text-sm font-bold tracking-wide border border-slate-100 hover:border-teal-200">
                   <Mail className="w-5 h-5" />
-                  $member.email
+                  {member.email}
                 </a>
-                <a href={$member.linkedin} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 py-3.5 px-4 rounded-2xl bg-slate-50 hover:bg-blue-50 text-slate-600 hover:text-blue-700 transition-colors text-sm font-bold tracking-wide border border-slate-100 hover:border-blue-200">
+                <a href={member.linkedin} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 py-3.5 px-4 rounded-2xl bg-slate-50 hover:bg-blue-50 text-slate-600 hover:text-blue-700 transition-colors text-sm font-bold tracking-wide border border-slate-100 hover:border-blue-200">
                   <LinkIcon className="w-5 h-5" />
                   LinkedIn Profile
                 </a>
