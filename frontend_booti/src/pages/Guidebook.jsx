@@ -1,4 +1,4 @@
-import { useState } from 'react';
+ï»¿import { useState } from 'react';
 import { Camera, Activity, Accessibility, Clock, AlertTriangle, Zap, ShieldAlert, HeartPulse, ShieldCheck, Info, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
@@ -37,7 +37,7 @@ const PIPELINE_STAGES = [
     title: 'RISK ASSESSMENT',
     icon: AlertTriangle,
     tech: 'Rule Engine',
-    description: 'Combines posture transitions (e.g., Standing -> Lying) with motion thresholds (velocity > 60°/s). Outputs a risk score from 0.0 to 1.0.'
+    description: 'Combines posture transitions (e.g., Standing -> Lying) with motion thresholds (velocity > 60Â°/s). Outputs a risk score from 0.0 to 1.0.'
   },
   {
     id: 'state',
@@ -98,12 +98,12 @@ export default function Guidebook() {
                 Imagine an elderly person living alone. They suddenly lose balance and fall. The fall itself may take only a few seconds, but the dangerous part can be what happens afterwards: nobody may know that the person needs help.
               </p>
               <p>
-                Existing cameras can record an incident, but recording is not the same as understanding. A safety system should not merely capture what happened — it should recognize when something abnormal is happening and help trigger a response.
+                Existing cameras can record an incident, but recording is not the same as understanding. A safety system should not merely capture what happened â€” it should recognize when something abnormal is happening and help trigger a response.
               </p>
               <div className="p-6 md:p-8 rounded-2xl bg-teal-50 border border-teal-100 text-teal-900 font-medium text-center shadow-inner relative overflow-hidden mt-8">
                 <div className="absolute -right-10 -top-10 w-40 h-40 bg-teal-200/50 rounded-full blur-3xl"></div>
                 <p className="relative z-10 text-xl leading-relaxed">
-                  "Sanjeevani AI turns a normal camera feed into an intelligent monitoring layer. We don't just ask if there's a person—we ask what they are doing, and if they are safe."
+                  "Sanjeevani AI turns a normal camera feed into an intelligent monitoring layer. We don't just ask if there's a personâ€”we ask what they are doing, and if they are safe."
                 </p>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function Guidebook() {
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                             className="relative z-10 flex items-center justify-center text-teal-500/50"
                           >
-                             <stage.icon className="w-16 h-16 stroke-[1.5]" />
+                             {(() => { const ActiveIcon = stage.icon; return <ActiveIcon className="w-16 h-16 stroke-[1.5]" />; })()}
                           </motion.div>
                         </div>
                       </motion.div>
