@@ -1,0 +1,147 @@
+[20:49:44] FALL DETECTED — Person 0 | risk=0.34
+[20:49:52] ⚠ DANGER — Person 0 | lying still >= 5 s
+[20:49:52] FALL DETECTED — Person 0 | risk=0.55
+[20:50:00] FALL DETECTED — Person 0 | risk=0.43
+[20:50:03] RECOVERY — Person 0
+[21:26:32] FALL DETECTED — Person 1 | risk=0.50
+[21:26:34] RECOVERY — Person 1[22:57:35] ⚠ DANGER — Person 0 | lying still >= 5 s
+[22:57:45] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:50] ⚠ DANGER — Person 1 | lying still >= 5 s
+[23:25:01] ⚠ DANGER — Person 1 | lying still >= 5 s
+[23:34:13] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:34:23] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:34:27] ⚠ DANGER — Person 1 | lying still >= 5 s
+[23:34:33] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:34:43] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:37:25] FALL DETECTED — Person 0 | risk=0.26
+[23:37:31] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:37:33] FALL DETECTED — Person 0 | risk=0.40
+[23:37:41] FALL DETECTED — Person 0 | risk=0.35
+[23:37:44] RECOVERY — Person 0
+// if you want you can replace main.py code with new gmail raj pratap 
+[18:46:45] ⚠ DANGER — Person 0 | lying still >= 5 s
+
+[20:20:37] 🎙 VOICE EMERGENCY — command=sanjivani need help
+[20:26:31] ⚠ DANGER — Person 0 | lying still >= 5 s
+[20:28:46] FALL DETECTED — Person 0 | risk=0.27
+[20:28:55] FALL DETECTED — Person 0 | risk=0.40
+[20:28:55] ⚠ DANGER — Person 0 | lying still >= 5 s
+[20:29:05] FALL DETECTED — Person 0 | risk=0.32
+[20:29:06] ⚠ DANGER — Person 0 | lying still >= 5 s
+[20:29:14] FALL DETECTED — Person 0 | risk=0.20
+[20:29:16] ⚠ DANGER — Person 0 | lying still >= 5 s
+[20:29:22] FALL DETECTED — Person 0 | risk=0.36
+[20:29:30] FALL DETECTED — Person 0 | risk=0.12
+[20:29:32] RECOVERY — Person 0
+[20:31:54] 🎙 VOICE EMERGENCY — command=sanjivani need help
+[06:04:00] 🎙 VOICE EMERGENCY — command=sanjivani need help
+[23:19:29] FALL DETECTED — Person 1 | risk=0.24
+[23:19:37] FALL DETECTED — Person 1 | risk=0.28
+[23:19:41] RECOVERY — Person 1
+[23:21:42] FALL DETECTED — Person 2 | risk=0.26
+[23:21:50] FALL DETECTED — Person 2 | risk=0.29
+[23:21:57] RECOVERY — Person 2
+[23:25:00] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:25:09] ⚠ DANGER — Person 2 | lying still >= 5 s
+[23:31:11] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:31:43] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:32:51] FALL DETECTED — Person 6 | risk=0.29
+[23:32:59] FALL DETECTED — Person 6 | risk=0.19
+[23:33:07] FALL DETECTED — Person 6 | risk=0.45
+[23:33:07] RECOVERY — Person 6
+[11:48:46] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:15:15] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:34:26] FALL DETECTED — Person 0 | risk=0.24
+[12:34:35] FALL DETECTED — Person 0 | risk=0.47
+[12:34:38] RECOVERY — Person 0
+[12:35:09] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:35:37] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:35:47] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:36:11] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:42:53] FALL DETECTED — Person 0 | risk=0.33
+[12:43:01] FALL DETECTED — Person 0 | risk=0.09
+[12:43:06] RECOVERY — Person 0
+[12:43:22] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:43:39] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:43:54] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:44:04] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:44:14] ⚠ DANGER — Person 0 | lying still >= 5 s
+[12:44:40] ⚠ DANGER — Person 0 | lying still >= 5 s
+[13:43:59] ⚠ DANGER — Person 11 | lying still >= 5 s
+[13:45:27] FALL DETECTED — Person 14 | risk=0.26
+[13:45:35] FALL DETECTED — Person 14 | risk=0.28
+[13:45:43] FALL DETECTED — Person 14 | risk=0.36
+[13:45:45] RECOVERY — Person 14
+[13:45:59] ⚠ DANGER — Person 14 | lying still >= 5 s
+[13:47:44] FALL DETECTED — Person 0 | risk=0.24
+[13:47:52] FALL DETECTED — Person 0 | risk=0.13
+[13:47:56] RECOVERY — Person 0
+[14:06:00] FALL DETECTED — Person 0 | risk=0.31
+[14:06:08] FALL DETECTED — Person 0 | risk=0.53
+[14:06:12] RECOVERY — Person 0
+[22:24:58] ⚠ DANGER — Person 2 | lying still >= 5 s
+[22:28:44] FALL DETECTED — Person 1 | risk=0.25
+[22:28:49] RESPONSIVE — Person 1 | moving, not yet upright
+[22:29:13] FALL DETECTED — Person 1 | risk=0.02
+[22:29:17] RECOVERY — Person 1
+[23:06:27] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:17:22] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:17:32] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:17:42] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:17:55] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:18:12] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:18:28] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:18:38] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:18:48] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:18:58] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:19:08] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:19:19] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:19:29] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:19:39] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:19:49] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:20:15] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:20:25] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:21:03] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:21:13] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:21:43] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:21:54] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:22:04] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:22:14] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:22:56] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:23:26] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:23:37] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:23:47] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:06] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:16] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:27] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:37] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:47] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:24:57] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:25:07] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:25:17] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:25:59] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:26:11] ⚠ DANGER — Person 0 | lying still >= 5 s
+[23:27:25] ⚠ DANGER — Person 2 | lying still >= 5 s
+[23:27:49] ⚠ DANGER — Person 2 | lying still >= 5 s
+[23:28:57] ⚠ DANGER — Person 3 | lying still >= 5 s
+[23:29:08] ⚠ DANGER — Person 3 | lying still >= 5 s
+[23:29:52] ⚠ DANGER — Person 3 | lying still >= 5 s
+[23:30:03] ⚠ DANGER — Person 3 | lying still >= 5 s
+[23:30:13] ⚠ DANGER — Person 3 | lying still >= 5 s
+[23:33:29] 🎙 VOICE EMERGENCY — command=sanjivani need help
+[23:34:43] 🎙 VOICE EMERGENCY — command=sanjivani need help
+[23:37:13] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:37:29] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:38:05] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:38:19] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:38:29] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:38:39] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:38:49] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:38:59] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:39:20] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:39:30] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:39:40] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:39:58] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:39:58] 🎙 VOICE EMERGENCY — command=sanjivani need help
+[23:40:08] ⚠ DANGER — Person 5 | lying still >= 5 s
+[23:40:19] ⚠ DANGER — Person 5 | lying still >= 5 s

@@ -1,0 +1,14 @@
+﻿.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*.class
+*.log
+*.sqlite3
+*.mp4
+*.avi
+*.mov
+.DS_Store
+Thumbs.db
