@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Terminal, Activity, Wifi, WifiOff, ShieldAlert, ServerOff, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
@@ -152,7 +152,7 @@ export default function Camera() {
                        className={clsx("h-full transition-all duration-300", 
                          p.risk_score > 0.7 ? "bg-red-500" : p.risk_score > 0.4 ? "bg-amber-400" : "bg-teal-500"
                        )} 
-                       style={{width: ${p.risk_score * 100}%}} 
+                       style={{width: `${p.risk_score * 100}%`}} 
                      />
                   </div>
                 </div>
