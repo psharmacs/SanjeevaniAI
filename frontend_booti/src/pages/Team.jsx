@@ -28,10 +28,6 @@ export default function Team() {
 
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
         <header className="mb-28 text-center mt-8">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-teal-50 border border-teal-200 text-teal-800 font-bold tracking-widest uppercase text-xs mb-8 shadow-sm">
-             <Code2 className="w-4 h-4" />
-             Smart India Hackathon 2024
-          </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-slate-900 mb-6">
             We are <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-400">The Prometheus</span>
           </h1>
