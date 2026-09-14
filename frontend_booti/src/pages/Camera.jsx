@@ -1,10 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
-import { Terminal, Activity, Wifi, WifiOff } from 'lucide-react';
+﻿import { useState, useEffect, useRef } from 'react';
+import { Terminal, Activity, Wifi, WifiOff, ShieldAlert, ServerOff, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 export default function Camera() {
   const [state, setState] = useState(null);
   const [connected, setConnected] = useState(false);
+  const [nodeOffline, setNodeOffline] = useState(false);
   const logEndRef = useRef(null);
 
   useEffect(() => {
@@ -14,11 +16,13 @@ export default function Camera() {
       ws.onopen = () => setConnected(true);
       ws.onclose = () => {
         setConnected(false);
-        setTimeout(connect, 2000);
+        // Only try to reconnect a few times or silently to avoid spamming the public user
+        setTimeout(connect, 5000);
       };
       ws.onmessage = (event) => {
         try {
           setState(JSON.parse(event.data));
+          setNodeOffline(false); // If we get data, it's definitely online
         } catch (e) {
           console.error(e);
         }
@@ -33,6 +37,9 @@ export default function Camera() {
     logEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [state?.logs]);
 
+  // If websocket fails for more than a few seconds initially, we might consider the node offline.
+  // We'll also rely on the image onError event as a surefire way to know if localhost:8000 is unreachable.
+
   return (
     <div className="min-h-[calc(100vh-5rem)] bg-transparent p-6 max-w-[1600px] mx-auto flex flex-col md:flex-row gap-6">
       
@@ -42,25 +49,49 @@ export default function Camera() {
           <div className="flex items-center gap-3 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
             {connected ? <Wifi className="w-4 h-4 text-teal-600" /> : <WifiOff className="w-4 h-4 text-red-500" />}
             <span className="font-mono text-xs tracking-wider text-slate-700 font-bold">
-              {connected ? 'WS_CONNECTED' : 'WS_DISCONNECTED'}
+              {connected ? 'NODE_CONNECTED' : 'NODE_DISCONNECTED'}
             </span>
           </div>
-          <div className="font-mono text-xs text-slate-700 font-bold bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
-            FPS: {state?.fps || '0.0'}
-          </div>
+          {connected && (
+            <div className="font-mono text-xs text-slate-700 font-bold bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
+              FPS: {state?.fps || '0.0'}
+            </div>
+          )}
         </div>
 
-        <div className="flex-1 relative bg-slate-100 flex items-center justify-center p-2 rounded-3xl">
-          {connected ? (
+        <div className="flex-1 relative bg-slate-100 flex items-center justify-center p-2 rounded-3xl overflow-hidden">
+          {nodeOffline ? (
+            <div className="flex flex-col items-center justify-center p-12 text-center max-w-lg mx-auto">
+                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg border border-slate-100 mb-8 relative">
+                   <div className="absolute inset-0 border-4 border-red-500 rounded-full animate-ping opacity-20"></div>
+                   <ServerOff className="text-red-500 w-10 h-10 relative z-10" />
+                </div>
+                <h3 className="text-slate-800 text-3xl font-black tracking-tight mb-4">Edge Node Not Detected</h3>
+                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                  Access Restricted. This live monitoring module requires a Sanjeevani AI local hardware node to be active on your local network. 
+                </p>
+                <Link to="/live" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white font-bold rounded-full hover:bg-teal-700 transition-colors shadow-lg hover:shadow-xl shadow-teal-600/20">
+                   View Simulation Instead <ArrowRight className="w-4 h-4" />
+                </Link>
+            </div>
+          ) : connected ? (
              <img 
                src="http://localhost:8000/video_feed" 
                className="h-full w-full object-contain rounded-2xl border border-slate-200" 
-               alt="Video Feed" 
+               alt="Live Node Feed" 
+               onError={() => setNodeOffline(true)}
              />
           ) : (
             <div className="text-slate-400 font-mono flex flex-col items-center">
               <Activity className="w-12 h-12 mb-4 animate-pulse opacity-50 text-slate-300" />
-              WAITING FOR STREAM...
+              CONNECTING TO EDGE NODE...
+              {/* Fallback to offline if it takes too long */}
+              <img 
+               src="http://localhost:8000/video_feed" 
+               style={{ display: 'none' }} 
+               onError={() => setNodeOffline(true)}
+               alt="ping"
+              />
             </div>
           )}
         </div>
@@ -79,7 +110,7 @@ export default function Camera() {
       </div>
 
       {/* Right Column: Telemetry & Logs */}
-      <div className="w-full md:w-[450px] flex flex-col gap-6">
+      <div className="w-full md:w-[450px] flex flex-col gap-6 opacity-40 grayscale pointer-events-none transition-all duration-700" style={{ opacity: connected ? 1 : 0.4, filter: connected ? 'grayscale(0)' : 'grayscale(100%)' }}>
         
         {/* Telemetry Card */}
         <div className="glass-panel border border-slate-200 rounded-3xl p-6 flex-shrink-0 relative overflow-hidden shadow-xl">
@@ -121,7 +152,7 @@ export default function Camera() {
                        className={clsx("h-full transition-all duration-300", 
                          p.risk_score > 0.7 ? "bg-red-500" : p.risk_score > 0.4 ? "bg-amber-400" : "bg-teal-500"
                        )} 
-                       style={{width: `${p.risk_score * 100}%`}} 
+                       style={{width: ${p.risk_score * 100}%}} 
                      />
                   </div>
                 </div>

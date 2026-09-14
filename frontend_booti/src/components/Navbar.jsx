@@ -28,7 +28,7 @@ export default function Navbar() {
           <Link to="/" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Home</Link>
           <Link to="/team" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/team') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Team</Link>
           <Link to="/live" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/live') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Simulation</Link>
-          <Link to="/camera" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/camera') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>PC Camera</Link>
+          <Link to="/camera" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/camera') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Live Node</Link>
           <Link to="/guidebook" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/guidebook') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Guidebook</Link>
         </div>
       </div>
