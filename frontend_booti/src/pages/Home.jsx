@@ -45,12 +45,11 @@ export default function Home() {
           </p>
           
           {/* Buttons */}
-            <div className="flex items-center gap-4 mb-16 relative group">
-              <div className="absolute -inset-1 bg-[#0a4d3c] rounded-full blur opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-              <div className="absolute inset-0 bg-teal-400 rounded-full animate-ping opacity-20"></div>
+            <div className="flex items-center gap-4 mb-16 relative group animate-bounce">
+              <div className="absolute -inset-1 bg-[#0a4d3c] rounded-full blur opacity-40 group-hover:opacity-60 transition duration-1000"></div>
               <button 
                 onClick={startTour} 
-                className="relative px-8 py-3.5 bg-[#0a4d3c] text-white hover:bg-[#07362a] font-bold rounded-full flex items-center gap-2 transition-all shadow-xl hover:scale-105 hover:shadow-2xl ring-4 ring-[#0a4d3c]/30"
+                className="relative px-8 py-3.5 bg-[#0a4d3c] text-white hover:bg-[#07362a] font-bold rounded-full flex items-center gap-2 transition-all shadow-xl hover:shadow-2xl ring-4 ring-[#0a4d3c]/30"
               >
                 Explore Our Solution &rarr;
               </button>

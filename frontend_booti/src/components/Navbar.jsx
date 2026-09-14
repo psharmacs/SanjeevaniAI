@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Shield } from 'lucide-react';
 import clsx from 'clsx';
 
 export default function Navbar() {
@@ -16,8 +15,8 @@ export default function Navbar() {
     )}>
       <div className="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center group-hover:bg-teal-100 transition-colors">
-            <Shield className="w-6 h-6 text-teal-600" />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
+            <img src="/LOGO.jpeg" alt="Sanjeevani AI Logo" className="w-full h-full object-cover" />
           </div>
           <div>
             <h1 className="text-xl font-black tracking-widest text-slate-800 uppercase">
@@ -28,11 +27,9 @@ export default function Navbar() {
         <div className="flex gap-8 items-center">
           <Link to="/" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Home</Link>
           <Link to="/team" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/team') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Team</Link>
-          <Link to="/live" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/live') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Simulation</Link>`n          <Link to="/camera" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/camera') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>PC Camera</Link>
+          <Link to="/live" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/live') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Simulation</Link>
+          <Link to="/camera" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/camera') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>PC Camera</Link>
           <Link to="/guidebook" className={clsx("text-xs font-bold tracking-[0.15em] uppercase transition-colors", isActive('/guidebook') ? "text-teal-600" : "text-slate-500 hover:text-teal-700")}>Guidebook</Link>
-          <Link to="/testing" className="px-6 py-2.5 bg-teal-600 text-white rounded-full font-bold text-xs tracking-widest hover:bg-teal-700 transition-colors shadow-md shadow-teal-500/20">
-            DEMO →
-          </Link>
         </div>
       </div>
     </nav>

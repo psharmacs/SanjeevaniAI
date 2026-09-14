@@ -12,35 +12,23 @@ const TEAM = [
     linkedin: "https://www.linkedin.com/in/prakhar-sharma-511b943b0",
     email: "prakhar0897sh@gmail.com",
     image: "/team/prakhar_new.jpg"
-  },
-  {
-    name: "Prince Singh Kushwah",
-    linkedin: "#",
-    email: "princerajawat2611@gmail.com",
-    image: "/team/prince.jpg"
-  },
-  {
-    name: "Sonam Sharma",
-    linkedin: "#",
-    email: "Sonamsharma29653@gmail.com",
-    image: "/team/sonam.jpg"
   }
 ];
 
 export default function Team() {
   return (
     <div className="min-h-[calc(100vh-5rem)] p-6 md:p-12 max-w-7xl mx-auto flex flex-col bg-transparent">
-      <header className="mb-16">
+      <header className="mb-16 text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-normal tracking-wide text-slate-900" style={{ fontFamily: 'Georgia, serif' }}>The Prometheus</h1>
         <p className="text-teal-600 mt-2 font-bold tracking-wider uppercase text-sm">Smart India Hackathon Team</p>
-        <p className="text-slate-600 mt-6 max-w-3xl leading-relaxed text-lg font-light">
-          We are <strong className="text-slate-900 font-medium">The Prometheus</strong>, a team of passionate developers and engineers united by a single vision: to build technology that saves lives. For the Smart India Hackathon, we developed <strong className="text-teal-600 font-medium">Sanjeevani AI</strong> to solve the critical challenge of elderly safety and fall detection using advanced computer vision and real-time processing.
+        <p className="text-slate-600 mt-6 leading-relaxed text-lg font-light text-left">
+          We are <strong className="text-slate-900 font-medium">The Prometheus</strong>, a team of two passionate developers and engineers united by a single vision: to build technology that saves lives. For the Smart India Hackathon, we developed <strong className="text-teal-600 font-medium">Sanjeevani AI</strong> to solve the critical challenge of elderly safety and fall detection using advanced computer vision and real-time processing.
           <br /><br />
           Meet the innovators behind the intelligence:
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto w-full">
         {TEAM.map((member, i) => (
           <div key={i} className="glass-panel rounded-2xl p-6 flex flex-col hover:border-teal-500/30 hover:shadow-2xl transition-all group">
             
